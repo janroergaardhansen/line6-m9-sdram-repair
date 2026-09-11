@@ -57,7 +57,7 @@ Although the documentation is for the M13, the production-test SysEx command als
 - A compatible USB-to-MIDI interface
 - A MIDI cable connected from the interface's **MIDI OUT** to the M9's **MIDI IN**
 - A SysEx transfer application
-- [`line6-m9-enter-production-test.syx`](sysex/line6-m9-enter-production-test.syx)
+- [`line6-m9-enter-production-test.syx`](sysex/Line6-M9-Enter-Production-Test.syx)
 
 ### Install the MIDI application
 
