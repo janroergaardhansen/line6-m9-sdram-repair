@@ -56,7 +56,7 @@ Although the documentation is for the M13, the production-test SysEx command als
 
 - A Windows computer
 - A compatible USB-to-MIDI interface
-- A MIDI cable connected from the interface's **MIDI OUT** to the M9's **MIDI IN**
+- A MIDI cable connected to both **MIDI OUT** and **MIDI IN**
 - A SysEx transfer application
 - [`line6-m9-enter-production-test.syx`](sysex/Line6_M9_Enter_Production_Test.syx)
 
@@ -69,6 +69,7 @@ Although the documentation is for the M13, the production-test SysEx command als
 3. Install it from **[Microsoft Store link](https://apps.microsoft.com/detail/9pfd4ddwgktn)**.
 4. Connect the USB-to-MIDI interface and allow Windows to finish installing it.
 I used **[Swissonic MidiConnect 2](https://www.thomann.dk/swissonic_midiconnect_2.htm)**
+![Swissonic MidiConnect 2](images/SwissonicMidiConnect2.png)
 
 ### Send the SysEx command
 
