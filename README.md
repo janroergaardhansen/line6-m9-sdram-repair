@@ -80,12 +80,6 @@ Although the documentation is for the M13, the production-test SysEx command als
 6. Send the SysEx message.
 7. Confirm that the M9 enters its production-test menu.
 
-> [!CAUTION]
-> The production menu may contain tests or operations capable of changing stored data. This repair only required viewing and running the relevant diagnostic tests. Avoid selecting undocumented functions unnecessarily.
-
-<!-- Add a photograph of the initial production-test screen here if available. -->
-![M9 production-test menu](images/production-test-menu.jpg)
-
 ## SDRAM test result
 
 All tested functions passed except SDRAM. The display reported:
@@ -97,7 +91,7 @@ SDRAM F
 Here, `F` indicated that the SDRAM production test had failed.
 
 <!-- REQUIRED: photograph showing SDRAM F. -->
-![Production test showing SDRAM failure](images/sdram-test-fail.jpg)
+![Production test showing SDRAM failure](images/Line6M9SDRAMFail.jpg)
 
 The result identifies a failure in the complete SDRAM subsystem. It does **not** identify which individual memory IC is defective. Possible causes include:
 
