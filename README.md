@@ -32,7 +32,7 @@ The M9 powered up normally, and its display and controls appeared to work. Howev
 - A factory reset and firmware 2.04 reinstallation did not solve the problem. **[Line 6 firmware update instructions](https://kb.line6.com/m5-m9-firmware-update-instructions)**
 
 <!-- Replace the path below with your overview or symptom photograph. -->
-![Line 6 M9 under test](images/m9-under-test.jpg)
+![Line 6 M9 under test](images/models_smallimage_assets_id_131.png)
 
 ## Diagnosis
 
