@@ -65,13 +65,12 @@ Although the documentation is for the M13, the production-test SysEx command als
 <!-- Replace APP NAME and APP URL with the exact Microsoft Store application used. -->
 
 1. Open the Microsoft Store.
-2. Search for **`[APP NAME]`**.
-3. Install it from **[Microsoft Store link](APP-URL)**.
+2. Search for **`[MIDI SysEx Transfer Utility]`**.
+3. Install it from **[Microsoft Store link](https://apps.microsoft.com/detail/9pfd4ddwgktn)**.
 4. Connect the USB-to-MIDI interface and allow Windows to finish installing it.
+I used **[Swissonic MidiConnect 2](https://www.thomann.dk/swissonic_midiconnect_2.htm)**
 
 ### Send the SysEx command
-
-<!-- Adjust these steps to match the exact labels used by the selected application. -->
 
 1. Connect the MIDI interface's output to the M9's MIDI input.
 2. Switch on the M9 normally.
@@ -120,15 +119,6 @@ Two ×16 SDRAM devices operate together as the SHARC's 32-bit external-memory ba
 The replacement has the required organisation, voltage, speed and 54-pin TSOP-II pinout. Consult the manufacturers' complete datasheets before substituting components.
 
 It was not established which of the two original EtronTech devices had failed. Both were replaced together.
-
-<!-- REQUIRED: PCB overview with the two SDRAM locations marked. -->
-![M9 PCB with both SDRAM devices identified](images/m9-pcb-sdram-location.jpg)
-
-<!-- Optional: close-up before replacement. -->
-![Original EtronTech EM638165TS SDRAMs](images/original-etrontech-sdram.jpg)
-
-<!-- Optional: close-up after replacement. -->
-![Alliance Memory replacement SDRAMs installed](images/replacement-alliance-sdram.jpg)
 
 ## Repair procedure
 
@@ -194,5 +184,6 @@ The same symptoms were previously reported for an M13—effects remained dry and
 - [EtronTech EM638165 SDRAM datasheet](https://etron.com/wp-content/uploads/2022/04/EM638165TSBM-Industrial_Rev-6.0.pdf)
 - [Unresolved M13 report with similar symptoms](https://line6.com/support/topic/2608-m13-problem-is-my-unit-dead/)
 - [Line 6 firmware update instructions](https://kb.line6.com/m5-m9-firmware-update-instructions)
+- [Swissonic MidiConnect 2](https://www.thomann.dk/swissonic_midiconnect_2.htm)
 - [Related M9 hardware-repair discussion](https://line6.com/support/topic/36647-m9-no-sound-hardware-repair-experience/)
 
