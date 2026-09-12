@@ -29,7 +29,7 @@ The M9 powered up normally, and its display and controls appeared to work. Howev
 - The guitar effects did not process the signal.
 - Selecting an effect sometimes caused approximately one second of silence, after which the clean signal returned.
 - The tuner display could show `Mute` even though audio continued to pass until the setting was toggled.
-- A factory reset and firmware 2.04 reinstallation did not solve the problem.
+- A factory reset and firmware 2.04 reinstallation did not solve the problem. ![Line 6 firmware update instructions](https://kb.line6.com/m5-m9-firmware-update-instructions)
 
 <!-- Replace the path below with your overview or symptom photograph. -->
 ![Line 6 M9 under test](images/m9-under-test.jpg)
