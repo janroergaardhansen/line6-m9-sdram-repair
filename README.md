@@ -76,7 +76,7 @@ Although the documentation is for the M13, the production-test SysEx command als
 2. Switch on the M9 normally.
 3. Open **`[APP NAME]`**.
 4. Select the USB-to-MIDI interface as the MIDI output device.
-5. Open or import [`line6-m9-enter-production-test.syx`](sysex/line6-m9-enter-production-test.syx).
+5. Open or import [`line6-m9-enter-production-test.syx`](sysex/Line6_M9_Enter_Production_Test.syx).
 6. Send the SysEx message.
 7. Confirm that the M9 enters its production-test menu.
 
@@ -90,7 +90,6 @@ SDRAM F
 
 Here, `F` indicated that the SDRAM production test had failed.
 
-<!-- REQUIRED: photograph showing SDRAM F. -->
 ![Production test showing SDRAM failure](images/Line6M9SDRAMFail.jpg)
 
 The result identifies a failure in the complete SDRAM subsystem. It does **not** identify which individual memory IC is defective. Possible causes include:
@@ -101,6 +100,9 @@ The result identifies a failure in the complete SDRAM subsystem. It does **not**
 - A solder-joint or PCB-trace fault
 - Missing or unstable 3.3 V supply
 - A clock or SDRAM-controller problem
+
+At first resoldering the SDRAM chips was tried out, but that did not solve the issue.
+![The PCB with the resoldered SDRAM chips](images/Line6M9SDRAMChips.jpg.jpg)
 
 ## Replacement parts
 
