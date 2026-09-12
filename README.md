@@ -102,7 +102,7 @@ The result identifies a failure in the complete SDRAM subsystem. It does **not**
 - A clock or SDRAM-controller problem
 
 At first resoldering the SDRAM chips was tried out, but that did not solve the issue.
-![The PCB with the resoldered SDRAM chips](images/Line6M9SDRAMChips.jpg.jpg)
+![The PCB with the resoldered SDRAM chips](images/Line6M9SDRAMChips.jpg)
 
 ## Replacement parts
 
