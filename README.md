@@ -75,7 +75,7 @@ I used **[Swissonic MidiConnect 2](https://www.thomann.dk/swissonic_midiconnect_
 
 1. Connect the MIDI interface's output to the M9's MIDI input.
 2. Switch on the M9 normally.
-3. Open **`[APP NAME]`**.
+3. Open **`[MIDI SysEx Transfer Utility]`**.
 4. Select the USB-to-MIDI interface as the MIDI output device.
 5. Open or import [`line6-m9-enter-production-test.syx`](sysex/Line6_M9_Enter_Production_Test.syx).
 6. Send the SysEx message.
