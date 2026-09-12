@@ -27,6 +27,7 @@ The M9 powered up normally, and its display and controls appeared to work. Howev
 - DSP Bypass passed a normal clean guitar signal.
 - The tuner did not detect the guitar signal.
 - The guitar effects did not process the signal.
+- The looper did not work
 - Selecting an effect sometimes caused approximately one second of silence, after which the clean signal returned.
 - The tuner display could show `Mute` even though audio continued to pass until the setting was toggled.
 - A factory reset and firmware 2.04 reinstallation did not solve the problem. **[Line 6 firmware update instructions](https://kb.line6.com/m5-m9-firmware-update-instructions)**
@@ -102,7 +103,7 @@ The result identifies a failure in the complete SDRAM subsystem. It does **not**
 - A clock or SDRAM-controller problem
 
 At first resoldering the SDRAM chips was tried out, but that did not solve the issue.
-![The PCB with the resoldered SDRAM chips](images/Line6M9SDRAMChips.jpg)
+![The PCB with the resoldered SDRAM chips](images/Line6M9SDRAMChipsEtrontech.jpg)
 
 ## Replacement parts
 
@@ -146,14 +147,15 @@ A suitable procedure requires, at minimum:
 General sequence used:
 
 1. Record the orientation of both original SDRAMs and locate pin 1.
-2. Protect nearby heat-sensitive components appropriately.
-3. Remove both original SDRAM devices using controlled preheating and hot air.
+2. Protect nearby heat-sensitive components appropriately for example using Kapton tape.
+3. Remove both original SDRAM devices using controlled preheating and hot air. Flux all pins and apply solder to cover all pins, then use hot air gun at 350 degrees Celcius - it can take minutes before the chip comes loose.
 4. Clean and inspect every PCB pad.
 5. Position both `AS4C4M16SA-6TIN` replacements with the correct orientation.
 6. Solder all leads and inspect them under magnification.
 7. With power disconnected, check for shorts between neighbouring pins.
-8. Verify continuity of the supply, ground, address, data and control connections.
-9. Power the M9 and rerun the SDRAM production test.
+8. Power the M9 and rerun the SDRAM production test.
+
+![The PCB with the resoldered SDRAM chips](images/Line6M9SDRAMChipsAlliance.jpg)
 
 ### Important lesson from this repair
 
@@ -162,16 +164,6 @@ Immediately after replacing the SDRAMs, the test still reported `SDRAM F`. Inspe
 After removing that bridge, the production test changed to `SDRAM P` and the M9 worked normally.
 
 Therefore, a continued failure following replacement does not necessarily mean the replacement part is incompatible. Check every solder joint before replacing further components.
-
-Particular attention should be paid to:
-
-- `CLK`, `CKE` and `CS#`
-- `RAS#`, `CAS#` and `WE#`
-- Address and bank-address pins
-- Every `DQ` data pin
-- `LDQM` and `UDQM`, which should be tied low in this SHARC design
-- All VDD/VDDQ and VSS/VSSQ pins
-- Shorts between adjacent leads
 
 ## Result
 
@@ -183,9 +175,6 @@ After correcting the solder bridge:
 - The temporary silence and return to dry audio disappeared.
 - DSP Bypass continued to operate normally.
 
-<!-- REQUIRED or strongly recommended: photograph showing SDRAM P after repair. -->
-![Production test showing SDRAM passed](images/sdram-test-pass.jpg)
-
 The repair demonstrates that working DSP-bypass audio does not prove that all DSP-related hardware is healthy. The SHARC could execute the basic dry-audio path while failure of its external SDRAM prevented the tuner and effects engine from operating correctly.
 
 ## Technical notes
@@ -196,25 +185,6 @@ Another Line 6 M-series unit with similar symptoms could have a different cause.
 
 The same symptoms were previously reported for an M13—effects remained dry and changing effects caused about one second of silence—but no final repair was published. The successful M9 repair described here suggests SDRAM is worth testing in a similarly affected unit; it does not prove that every M9 or M13 with these symptoms has the same fault.
 
-## Repository layout
-
-```text
-.
-├── README.md
-├── images
-│   ├── m9-under-test.jpg
-│   ├── production-test-menu.jpg
-│   ├── sdram-test-fail.jpg
-│   ├── sdram-test-pass.jpg
-│   ├── m9-pcb-sdram-location.jpg
-│   ├── original-etrontech-sdram.jpg
-│   └── replacement-alliance-sdram.jpg
-└── sysex
-    └── line6-m9-enter-production-test.syx
-```
-
-Remove unused image entries and their corresponding Markdown references.
-
 ## References
 
 - [Line 6 M13 service manual](https://www.synthxl.com/wp-content/uploads/2021/03/Line-6-M-13-Stompbox-Modeler-Service-Manual.pdf)
@@ -223,20 +193,6 @@ Remove unused image entries and their corresponding Markdown references.
 - [Alliance Memory AS4C4M16SA datasheet](https://www.alliancememory.com/wp-content/uploads/2025/03/Alliance_Memory_64M-AS4C4M16SA-CI_v5.0_October_2018.pdf)
 - [EtronTech EM638165 SDRAM datasheet](https://etron.com/wp-content/uploads/2022/04/EM638165TSBM-Industrial_Rev-6.0.pdf)
 - [Unresolved M13 report with similar symptoms](https://line6.com/support/topic/2608-m13-problem-is-my-unit-dead/)
+- [Line 6 firmware update instructions](https://kb.line6.com/m5-m9-firmware-update-instructions)
 - [Related M9 hardware-repair discussion](https://line6.com/support/topic/36647-m9-no-sound-hardware-repair-experience/)
-
-## Contributing additional findings
-
-If you encounter the same fault, useful information to include in an issue or discussion would be:
-
-- Exact model and firmware version
-- Production-test results
-- Original SDRAM markings
-- Replacement part number, if applicable
-- Whether DSP Bypass passes audio
-- Tuner behaviour
-- What happens when an effect is selected
-- Clear PCB and soldering photographs
-
-This information may help establish whether SDRAM failure is a recurring fault across the Line 6 M-series.
 
